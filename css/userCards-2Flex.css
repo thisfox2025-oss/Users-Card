@@ -16,7 +16,6 @@ body {
   gap: 10px;
   position: relative;
   width: 450px;
-  height: 550px;
   margin: 15px;
   padding: 15px 25px;
   background-color: aliceblue;
@@ -33,9 +32,6 @@ body {
   right: 15px;
 }
 
-.userName {
-}
-
 .userWork {
   color: rgb(125, 129, 133);
 }
@@ -45,12 +41,6 @@ body {
   justify-content: center;
   gap: 25px;
   text-align: center;
-}
-
-.userPro {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center; */
 }
 
 .userProjects {
@@ -81,19 +71,19 @@ body {
   border: 1px solid black;
   border-radius: 50%;
 }
-.socialLinkItem.twitter {
+.twitter {
   background-color: rgb(65, 176, 250);
   color: white;
 }
-.socialLinkItem.facebook-f {
+.facebook-f {
   background-color: rgb(58, 88, 153);
   color: white;
 }
-.socialLinkItem.google {
+.google {
   background-color: rgb(255, 118, 94);
   color: white;
 }
-.socialLinkItem.instagram {
+.instagram {
   background-color: rgb(241, 98, 151);
   color: white;
 }
@@ -103,8 +93,7 @@ body {
   gap: 25px;
   margin-top: 22px;
   border-radius: 25px;
-  /* width: 100%; */
-  margin-top: 22px;
+
   padding: 15px 60px;
   text-align: center;
   border: 1px solid #9a9a9a;
