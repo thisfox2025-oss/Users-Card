@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+.outerContaner {
+  border: 2px solid green;
+  height: 650px;
+}
+
+.innerBloc {
+  border: 2px solid rgb(252, 0, 0);
+  width: 150px;
+  height: 150px;
+}
+
+.gridParent {
+  display: grid;
+  /* grid */
+  /* явна сітка */
+  /* px % vw 1fr minmax(320px, 800px) repeat(auto-fill, 200px)*/
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  /* неявна сітка */
+  /* grid-auto-flow: row;
+  grid-auto-rows: auto; */
+
+  /* розташування єлементів в вздовш осей всередині комірки  */
+  /* justify-items: end;
+  align-items: start; */
+
+  /* розташування комірок в здовж осі */
+  /* justify-content: center;
+  align-content: center; */
+  gap: 10px;
+  justify-items: start;
+  align-items: end;
+}
+/*  Kwiga 54-3 Частина 1 */
+
+.gridChild {
+  order: 6;
+  justify-self: stretch;
+  align-self: center;
+}
+.gridChild:nth-child(6){
+  justify-self: stretch;
+  align-self: center;
+}
+/* .gridChild:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
+
+.gridChild:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 10;
+}
+
+.gridChild:nth-child(3) {
+  grid-row-start: 2;
+  grid-row-end: 6;
+} */
+/*
+body {
+  display: grid;
+  grid-template-columns: 1fr minmax(150px, 300px) minmax(400px, 600px) 1fr;
+  grid-template-rows: 200px 1fr 150px;
+
+  min-height: 100vh;
+}
+
+header,
+nav,
+main,
+footer {
+  border: 5px solid green;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.nav {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.main {
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px auto auto 100px;
+  }
+
+  .header {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .nav {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .footer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+} */

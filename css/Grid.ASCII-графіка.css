@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+.innerBlock,
+nav,
+header,
+footer,
+main {
+  border: 2px solid rgb(252, 0, 0);
+}
+/* .outerContaner {
+  border: 2px solid green;
+  height: 650px;
+}
+
+
+.gridParent {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+
+  grid-template-areas: 
+  'b1 b2 b3'
+  'b4 b5 b6'
+  'b7 b7 b8';
+}
+
+.gridChild:nth-child(1) {
+  grid-area: b1;
+}
+.gridChild:nth-child(2) {
+  grid-area: b2;
+}
+.gridChild:nth-child(3) {
+  grid-area: b3;
+}
+.gridChild:nth-child(4) {
+  grid-area: b4;
+}
+.gridChild:nth-child(5) {
+  grid-area: b5;
+}
+.gridChild:nth-child(6) {
+  grid-area: b6;
+} */
+
+body {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 300px) minmax(400px, 600px) 1fr;
+  grid-template-rows: 250px 1fr 150px;
+
+  grid-template-areas:
+    "pageHeader pageHeader pageHeader pageHeader"
+    ". pageNav pageMain . "
+    "pageFooter pageFooter pageFooter pageFooter";
+}
+
+.header {
+  grid-area: pageHeader;
+}
+.nav {
+  grid-area: pageNav;
+}
+.innerBloc {
+  height: 80px;
+}
+.main {
+  grid-area: pageMain;
+
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 100px));
+  gap: 20px;
+  align-content: start;
+
+}
+
+.footer {
+  grid-area: pageFooter;
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px auto 1fr 100px;
+    grid-template-areas:
+      'pageHeader'
+      'pageNav'
+      'pageMain'
+      'pageFooter';
+  }
+}

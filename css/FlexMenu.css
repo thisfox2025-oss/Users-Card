@@ -56,7 +56,26 @@ header {
   text-transform: uppercase;
 }
 
-
 .petxContent {
   margin: 80px;
+}
+
+/* Адаптивність */
+p {
+  color: #fff;
+}
+
+@media screen and (min-width: 400px) {
+  p {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  article {
+    flex-direction: column;
+  }
+  p {
+    padding: 20px;
+  }
 }

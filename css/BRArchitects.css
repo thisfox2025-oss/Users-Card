@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.menuHeader {
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  padding: 8px 16px;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.75);
+  z-index: 100000;
+}
+
+.logoMenu {
+  display: grid;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.headerMenuItem {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: inherit;
+  text-transform: capitalize;
+  line-height: 1.5;
+  letter-spacing: 4px;
+}
+
+.headerMenuItem:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.contentContainer {
+  padding: 0 40px;
+}
+
+.mainSection {
+  background-image: url("/foto/architect.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 300px 10px 250px;
+
+  font-size: 36px;
+  text-align: center;
+  color: #fffafa;
+}
+
+.mainTitle {
+  line-height: 1.5;
+}
+
+.logoBox {
+  padding: 8px 16px;
+  /* text-align: center; */
+  opacity: 0.75;
+  background-color: #000000;
+  color: #fff;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
+
+.projects img {
+  width: 100%; /* щоб картинка підлаштовувалась під колонку */
+  height: auto; /* зберігає пропорції */
+  object-fit: cover; /* обрізає зайве, щоб виглядало акуратно */
+}
+
+.project .label {
+  position: absolute; /* робить елемент незалежним від потоку і дозволяє ставити його поверх картинки */
+  top: 0;
+  background: black; /* чорний фон плашки */
+  color: white; /* білий текст */
+  padding: 8px 16px;
+  font-size: 15px; /* розмір шрифту */
+}
+
+.project {
+  position: relative;
+}
+
+.sectionTitle {
+  padding: 58px 0;
+  font-size: 24px;
+}
+
+.textAbout {
+  padding: 16px 0;
+}
+
+.fotoConteiner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
+
+.foto {
+  width: 100%; /* щоб картинка підлаштовувалась під колонку */
+  height: auto; /* зберігає пропорції */
+  object-fit: cover; /* обрізає зайве, щоб виглядало акуратно */
+}
+
+.name {
+  font-size: 24px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.workName {
+  opacity: 0.6;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+.btContact {
+  border: 0;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btContact:hover {
+  color: #000;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.formInput {
+  padding: 8px;
+  margin-top: 20px;
+}
+
+.formInput:focus {
+  border: 2px;
+}
+
+.maps {
+  margin: 16px 0;
+}
+
+.maps img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.submitButton {
+  margin: 16px 0;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+.submitButton:hover {
+  color: #000;
+  background-color: #ccc;
+}
+footer {
+  background-color: #000;
+}
+
+#headerBurgerButton,
+.headerBurgerLabel {
+  display: none;
+  user-select: none;
+}
+
+.headerBurgerLabel span,
+.headerBurgerLabel span::before,
+.headerBurgerLabel span::after {
+  display: block;
+  background-color: #333;
+  height: 5px;
+  width: 35px;
+  border-radius: 3px;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.headerBurgerLabel span::before {
+  content: "";
+  top: -10px;
+}
+
+.headerBurgerLabel span::after {
+  content: "";
+  top: 10px;
+}
+
+#headerBurgerButton:checked ~ .headerBurgerLabel span {
+  background-color: transparent;
+}
+
+#headerBurgerButton:checked ~ .headerBurgerLabel span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+#headerBurgerButton:checked ~ .headerBurgerLabel span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .fotoConteiner {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+@media screen and (max-width: 480px) {
+  .headerBurgerLabel {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 56px;
+    z-index: 100000;
+    transition: max-height 0.5s ease-in-out;
+    background-color: white;
+  }
+  #headerBurgerButton:checked ~ .menu {
+    max-height: 100vh;
+  }
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .fotoConteiner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
