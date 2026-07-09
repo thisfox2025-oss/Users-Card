@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/BRArchitects.css" />
     <title>BR Architects</title>
+    <script>
+      const hideMenuItem = () =>
+        (document.querySelector("#headerBurgerButton").checked = false);
+    </script>
   </head>
   <body>
     <header class="menuHeader">
@@ -13,11 +17,17 @@
         <a class="headerMenuItem" href="#">BR Architects</a>
       </div>
       <input type="checkbox" id="headerBurgerButton" />
-      <div class="menu">
-        <a class="headerMenuItem" href="#Projects">Projects</a>
-        <a class="headerMenuItem" href="#About">about</a>
-        <a class="headerMenuItem" href="#Contact">contact</a>
-      </div>
+      <nav class="menu">
+        <a class="headerMenuItem" href="#Projects" onclick="hideMenuItem()"
+          >Projects</a
+        >
+        <a class="headerMenuItem" href="#About" onclick="hideMenuItem()"
+          >about</a
+        >
+        <a class="headerMenuItem" href="#Contact" onclick="hideMenuItem()"
+          >contact</a
+        >
+      </nav>
       <label for="headerBurgerButton" class="headerBurgerLabel">
         <span></span>
       </label>

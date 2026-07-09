@@ -252,7 +252,7 @@ footer {
     grid-template-rows: repeat(2, auto);
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
   .headerBurgerLabel {
     width: 40px;
     display: flex;
@@ -272,12 +272,15 @@ footer {
     left: 0;
     top: 56px;
     z-index: 100000;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
     background-color: white;
   }
   #headerBurgerButton:checked ~ .menu {
-    max-height: 100vh;
+    max-height: 120px;
   }
+}
+
+@media screen and (max-width: 480px) {
   .projects {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, auto);
