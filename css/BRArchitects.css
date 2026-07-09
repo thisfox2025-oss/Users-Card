@@ -17,7 +17,7 @@ h6 {
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.menuHeader {
+.navMenu {
   display: flex;
   position: fixed;
   top: 0;
@@ -59,7 +59,7 @@ h6 {
   padding: 0 40px;
 }
 
-.mainSection {
+.mainHeader {
   background-image: url("/foto/architect.jpg");
   background-size: cover;
   background-position: center;

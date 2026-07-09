@@ -12,12 +12,12 @@
     </script>
   </head>
   <body>
-    <header class="menuHeader">
+    <nav class="navMenu">
       <div class="logoMenu">
         <a class="headerMenuItem" href="#">BR Architects</a>
       </div>
       <input type="checkbox" id="headerBurgerButton" />
-      <nav class="menu">
+      <div class="menu">
         <a class="headerMenuItem" href="#Projects" onclick="hideMenuItem()"
           >Projects</a
         >
@@ -27,15 +27,15 @@
         <a class="headerMenuItem" href="#Contact" onclick="hideMenuItem()"
           >contact</a
         >
-      </nav>
+      </div>
       <label for="headerBurgerButton" class="headerBurgerLabel">
         <span></span>
       </label>
+    </nav>
+    <header class="mainHeader">
+      <h1 class="mainTitle"><span class="logoBox">BR</span> Architects</h1>
     </header>
     <div class="contentContainer">
-      <section class="mainSection">
-        <h1 class="mainTitle"><span class="logoBox">BR</span> Architects</h1>
-      </section>
       <section class="projectsConteiner" id="Projects">
         <h2 class="sectionTitle">Projects</h2>
         <div class="projects">
